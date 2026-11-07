@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+/* -------------------------------------------------------------------------
+ * Typography & Offline Fonts
+ * ------------------------------------------------------------------------- */
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('/fonts/NotoSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('/fonts/NotoSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans Devanagari';
+  src: url('/fonts/NotoSansDevanagari-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans Devanagari';
+  src: url('/fonts/NotoSansDevanagari-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* -------------------------------------------------------------------------
+ * Design Tokens & Theme Variables
+ * ------------------------------------------------------------------------- */
+:root {
+  /* Core Brand Colors */
+  --postal-red: #D85B48;
+  --postal-red-hover: #C44836;
+  --postal-amber: #F3B83F;
+  --postal-green: #245B50;
+  --warm-ivory: #F7F1E8;
+  --charcoal: #303B38;
+
+  /* Light Theme Surfaces & Text */
+  --bg-main: #FDFBF8;
+  --bg-surface: #FFFFFF;
+  --bg-card: #F7F3EC;
+  --bg-card-hover: #F2ECE2;
+  --bg-card-secondary: #EDF6F3;
+  --border-subtle: #E4DDD2;
+  --border-strong: #CDC4B6;
+  --text-primary: #202927;
+  --text-secondary: #566460;
+  --text-muted: #82918D;
+
+  /* Disclaimer Callout (Light) */
+  --disclaimer-bg: #FFF7EB;
+  --disclaimer-border: #F4D09A;
+  --disclaimer-text: #6B4500;
+}
+
+.dark {
+  /* Dark Theme Surfaces & Text */
+  --bg-main: #141A18;
+  --bg-surface: #1B2321;
+  --bg-card: #222C29;
+  --bg-card-hover: #293532;
+  --bg-card-secondary: #1A302B;
+  --border-subtle: #2E3B37;
+  --border-strong: #40524D;
+  --text-primary: #F7F1E8;
+  --text-secondary: #BAC5C2;
+  --text-muted: #7E8E8A;
+
+  /* Disclaimer Callout (Dark) */
+  --disclaimer-bg: #2C2213;
+  --disclaimer-border: #64481C;
+  --disclaimer-text: #FFE2B3;
+}
+
+/* -------------------------------------------------------------------------
+ * Global Base Styles
+ * ------------------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-hindi {
+  font-family: 'Noto Sans Devanagari', 'Noto Sans', sans-serif;
+}
+
+/* Custom focus ring for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--postal-red);
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
