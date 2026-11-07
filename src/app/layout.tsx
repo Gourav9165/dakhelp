@@ -63,7 +63,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/branding/dak_help_postbox_icon.png" />
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8914149687018367" crossorigin="anonymous"></script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8914149687018367" crossOrigin="anonymous"></script>
       </head>
       <body className="min-h-screen flex flex-col antialiased">
         <ThemeProvider>
